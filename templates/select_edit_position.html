@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Редактирование должности</title>
+</head>
+<body>
+	<p align="center"><b><font size="12" color="Teal">Редактирование должности</font>
+
+
+	<form method="post" action="edit_position.html">
+	{% csrf_token %}
+
+	<p> <font face="Garamond"/font> Выберите код должности</p>
+	<p><select name="position_code">
+		{% for id in rez %}
+			<option>{{id}}</option>
+		{% endfor %}
+	</select>
+	</p>
+	<p><input type="submit" value="Редактировать"></p>
+</form>
+
+<p><a href="managing_job_directory.html">Вернуться к управлению справочником должностей</a></p>
+
+</body>
+</html>

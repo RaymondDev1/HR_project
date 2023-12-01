@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Редактирование сотрудника</title>
+</head>
+<body>
+	<p>Выберите сотрудника</p>
+
+	<form method="post" action="edit_employer.html">
+	{% csrf_token %}
+
+	<p> <font face="Garamond"/font> Выберите должность</p>
+	<p><select name="employer_id">
+		{% for id in rez %}
+			<option>{{id}}</option>
+		{% endfor %}
+	</select>
+	</p>
+	<p><input type="submit" value="Редактировать"></p>
+</form>
+	
+<p><a href="index.html">Вернуться на главную страницу</a></p>
+
+</body>
+</html>

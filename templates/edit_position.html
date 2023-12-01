@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Новые данные должности</title>
+</head>
+<body>
+
+<p align="center"><b><font size="12" color="Teal" face="Garamond">Новые данные должности</font>
+
+<form method="post" action="end_edit_position.html">
+	{% csrf_token %}
+	
+	<p>Введите название должности</p>
+	<p><input name="title_pos_name" autofocus></p>
+	<p><input type="submit" value="Ввести"></p>
+
+</form>
+
+<p><a href="select_edit_position.html">Вернуться к редактированию должности</a></p>
+
+
+</body>
+</html>

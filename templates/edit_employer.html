@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Новые данные сотрудника</title>
+</head>
+<body>
+
+<p align="center"><b><font size="12" color="Teal" face="Garamond">Новые данные сотрудника</font>
+
+<form method="post" action="end_edit_employer.html">
+	{% csrf_token %}
+
+	<p>Введите имя</p>
+	<p><input type="text" name="employer_fname" minlength="1" maxlength="15" autofocus required></p>
+
+	<p>Введите фамилию</p>
+	<p><input type="text" name="employer_lname" minlength="1" maxlength="25" autofocus required></p>
+
+	<p>Введите отчество</p>
+	<p><input type="text" name="employer_mname" minlength="1" maxlength="20" autofocus required></p>
+
+	<p> <font face="Garamond"/font> Выберите должность</p>
+	<p><select name="employer_position">
+		{% for id in rez %}
+			<option>{{id}}</option>
+		{% endfor %}
+	</select>
+	</p>
+
+	<p>Введите дату</p>
+	<p><input type="date" name="employer_date" min="2010-01-01" autofocus required></p>
+	<p><input type="submit" value="Изменить"></p>
+</form>
+
+<p><a href="select_edit_employer.html">Вернуться к редактированию сотрудника</a></p>
+
+</body>
+</html>

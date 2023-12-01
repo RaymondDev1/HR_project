@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Добавить должность</title>
+</head>
+<body>
+	<p align="center"><b><font size="12" color="Teal" face="Garamond">Добавление должности</font>
+</b></p>
+
+<form method="post" action="add_position_info.html">
+	{% csrf_token %}
+
+	<p>Введите код должности</p>
+	<p><input type="text" name="code_pos_name" minlength="3" maxlength="3" autofocus required></p>
+
+
+	<p>Введите название должности</p>
+	<p><input type="text" name="title_pos_name" minlength="1" maxlength="30" autofocus required></p>
+	<p><input type="submit" value="Ввести"></p>
+
+</form>
+
+<p><a href="managing_job_directory.html">Вернуться к управлению справочником должностей</a></p>
+
+</body>
+</html>
